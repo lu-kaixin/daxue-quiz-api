@@ -1,0 +1,175 @@
+[
+  {
+    "name": "大学知识题库（OCS · 单结果）",
+    "url": "https://your-domain.example.com/search",
+    "method": "post",
+    "contentType": "json",
+    "type": "GM_xmlhttpRequest",
+    "headers": {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    "data": {
+      "q": "${title}"
+    },
+    "handler": "return (res) => { if (!res) return undefined; const pick = (d) => [d.question, (d.answer_ocs || d.answer_letter || d.answer)]; if (res.items && res.items.length) return res.items.map(pick); if (res.data && res.data.question) return [pick(res.data)]; return undefined; }",
+    "author": "主体题目来自 C-Eval 开源数据集（按主题筛选重组），补充判断题经 GitHub tikuAdapter 接入的公开题库核对",
+    "version": "2.3",
+    "description": "多源检索：优先 GitHub 公开题库源，本地保留 248 道大学知识题（C-Eval 筛选 234 道 + 补充判断 14 道）。",
+    "homepage": "https://your-domain.example.com/api/daxue/meta",
+    "license": "CC BY-NC-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "updateTime": "2026-11-17",
+    "count": 248,
+    "sources": [
+      {
+        "id": "buguake",
+        "name": "不挂科题库源",
+        "via": "GitHub · DokiDoki1103/tikuAdapter",
+        "priority": 1,
+        "online": true,
+        "returns": "题干 + 答案"
+      },
+      {
+        "id": "icodef",
+        "name": "言溪题库",
+        "via": "GitHub · DokiDoki1103/tikuAdapter",
+        "priority": 2,
+        "online": true,
+        "returns": "仅答案"
+      },
+      {
+        "id": "local",
+        "name": "C-Eval 大学知识题",
+        "via": "本地库 · CC BY-NC-SA 4.0",
+        "priority": 3,
+        "online": false,
+        "returns": "题干 + 答案 + 解析"
+      }
+    ],
+    "resolution": "按优先级依次检索：1 不挂科（GitHub）→ 2 言溪（GitHub）→ 3 本地 C-Eval 大学知识题。可用 ?source=buguake|icodef|local|all 指定。",
+    "modules": [
+      {
+        "id": "ideal",
+        "name": "理想信念",
+        "count": 65
+      },
+      {
+        "id": "moral",
+        "name": "道德法治",
+        "count": 54
+      },
+      {
+        "id": "study",
+        "name": "学习与认知",
+        "count": 55
+      },
+      {
+        "id": "mind",
+        "name": "心理与健康",
+        "count": 37
+      },
+      {
+        "id": "social",
+        "name": "人际与适应",
+        "count": 13
+      },
+      {
+        "id": "campus",
+        "name": "大学与高等教育",
+        "count": 19
+      },
+      {
+        "id": "plan",
+        "name": "目标与计划",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "name": "大学知识题库（OCS · 多结果）",
+    "url": "https://your-domain.example.com/search?count=3",
+    "method": "get",
+    "contentType": "json",
+    "type": "GM_xmlhttpRequest",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "data": {
+      "q": "${title}"
+    },
+    "handler": "return (res) => { if (!res) return undefined; const pick = (d) => [d.question, (d.answer_ocs || d.answer_letter || d.answer)]; if (res.items && res.items.length) return res.items.map(pick); if (res.data && res.data.question) return [pick(res.data)]; return undefined; }",
+    "author": "主体题目来自 C-Eval 开源数据集（按主题筛选重组），补充判断题经 GitHub tikuAdapter 接入的公开题库核对",
+    "version": "2.3",
+    "description": "多源检索：优先 GitHub 公开题库源，本地保留 248 道大学知识题（C-Eval 筛选 234 道 + 补充判断 14 道）。",
+    "homepage": "https://your-domain.example.com/api/daxue/meta",
+    "license": "CC BY-NC-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "updateTime": "2026-11-17",
+    "count": 248,
+    "sources": [
+      {
+        "id": "buguake",
+        "name": "不挂科题库源",
+        "via": "GitHub · DokiDoki1103/tikuAdapter",
+        "priority": 1,
+        "online": true,
+        "returns": "题干 + 答案"
+      },
+      {
+        "id": "icodef",
+        "name": "言溪题库",
+        "via": "GitHub · DokiDoki1103/tikuAdapter",
+        "priority": 2,
+        "online": true,
+        "returns": "仅答案"
+      },
+      {
+        "id": "local",
+        "name": "C-Eval 大学知识题",
+        "via": "本地库 · CC BY-NC-SA 4.0",
+        "priority": 3,
+        "online": false,
+        "returns": "题干 + 答案 + 解析"
+      }
+    ],
+    "resolution": "按优先级依次检索：1 不挂科（GitHub）→ 2 言溪（GitHub）→ 3 本地 C-Eval 大学知识题。可用 ?source=buguake|icodef|local|all 指定。",
+    "modules": [
+      {
+        "id": "ideal",
+        "name": "理想信念",
+        "count": 65
+      },
+      {
+        "id": "moral",
+        "name": "道德法治",
+        "count": 54
+      },
+      {
+        "id": "study",
+        "name": "学习与认知",
+        "count": 55
+      },
+      {
+        "id": "mind",
+        "name": "心理与健康",
+        "count": 37
+      },
+      {
+        "id": "social",
+        "name": "人际与适应",
+        "count": 13
+      },
+      {
+        "id": "campus",
+        "name": "大学与高等教育",
+        "count": 19
+      },
+      {
+        "id": "plan",
+        "name": "目标与计划",
+        "count": 5
+      }
+    ]
+  }
+]
