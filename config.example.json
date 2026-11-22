@@ -1,0 +1,5 @@
+{
+  "publicBase": "https://your-domain.example.com",
+  "sharecode": "",
+  "publicHosts": ["your-domain.example.com", "example.com"]
+}
