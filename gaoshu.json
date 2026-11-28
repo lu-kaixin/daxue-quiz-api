@@ -1,0 +1,1533 @@
+{
+ "source": {
+  "site": "项目自建",
+  "dataset": "高等数学（微积分）选择题与判断题",
+  "dataset_url": "",
+  "license": "随本项目一同分发，仅限学习自测",
+  "license_url": ""
+ },
+ "modules": [
+  {
+   "id": "gs-极限",
+   "name": "高数 · 极限",
+   "count": 10
+  },
+  {
+   "id": "gs-无穷小",
+   "name": "高数 · 无穷小",
+   "count": 4
+  },
+  {
+   "id": "gs-连续",
+   "name": "高数 · 连续",
+   "count": 8
+  },
+  {
+   "id": "gs-导数",
+   "name": "高数 · 导数",
+   "count": 11
+  },
+  {
+   "id": "gs-导数应用",
+   "name": "高数 · 导数应用",
+   "count": 2
+  },
+  {
+   "id": "gs-极值",
+   "name": "高数 · 极值",
+   "count": 4
+  },
+  {
+   "id": "gs-单调性",
+   "name": "高数 · 单调性",
+   "count": 2
+  },
+  {
+   "id": "gs-中值定理",
+   "name": "高数 · 中值定理",
+   "count": 2
+  },
+  {
+   "id": "gs-不定积分",
+   "name": "高数 · 不定积分",
+   "count": 3
+  },
+  {
+   "id": "gs-定积分",
+   "name": "高数 · 定积分",
+   "count": 11
+  },
+  {
+   "id": "gs-定积分应用",
+   "name": "高数 · 定积分应用",
+   "count": 1
+  },
+  {
+   "id": "gs-广义积分",
+   "name": "高数 · 广义积分",
+   "count": 2
+  },
+  {
+   "id": "gs-级数",
+   "name": "高数 · 级数",
+   "count": 8
+  },
+  {
+   "id": "gs-微分方程",
+   "name": "高数 · 微分方程",
+   "count": 3
+  },
+  {
+   "id": "gs-偏导数",
+   "name": "高数 · 偏导数",
+   "count": 1
+  },
+  {
+   "id": "gs-全微分",
+   "name": "高数 · 全微分",
+   "count": 1
+  },
+  {
+   "id": "gs-重积分",
+   "name": "高数 · 重积分",
+   "count": 1
+  },
+  {
+   "id": "gs-可微性",
+   "name": "高数 · 可微性",
+   "count": 1
+  },
+  {
+   "id": "gs-微分",
+   "name": "高数 · 微分",
+   "count": 1
+  },
+  {
+   "id": "gs-多元",
+   "name": "高数 · 多元",
+   "count": 2
+  }
+ ],
+ "questions": [
+  {
+   "id": "gs001",
+   "question": "lim(x→0) sin3x/x =",
+   "options": [
+    "3",
+    "1/3",
+    "0",
+    "∞"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 3",
+   "module": "gs-极限",
+   "module_name": "高数 · 极限",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "sin3x~3x，故极限为 3。"
+  },
+  {
+   "id": "gs002",
+   "question": "lim(x→0) (1-cosx)/x² =",
+   "options": [
+    "1/2",
+    "1",
+    "0",
+    "2"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 1/2",
+   "module": "gs-极限",
+   "module_name": "高数 · 极限",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "1-cosx~x²/2。"
+  },
+  {
+   "id": "gs003",
+   "question": "lim(x→∞) (1+2/x)^x =",
+   "options": [
+    "e²",
+    "e",
+    "1",
+    "2e"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . e²",
+   "module": "gs-极限",
+   "module_name": "高数 · 极限",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "(1+a/x)^x→e^a。"
+  },
+  {
+   "id": "gs004",
+   "question": "lim(x→0) (√(1+x)-1)/x =",
+   "options": [
+    "1/2",
+    "0",
+    "1",
+    "2"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 1/2",
+   "module": "gs-极限",
+   "module_name": "高数 · 极限",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "分子有理化，等价于 x/2 除以 x。"
+  },
+  {
+   "id": "gs005",
+   "question": "lim(x→0) tanx/x =",
+   "options": [
+    "1",
+    "0",
+    "∞",
+    "1/2"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 1",
+   "module": "gs-极限",
+   "module_name": "高数 · 极限",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "tanx~x。"
+  },
+  {
+   "id": "gs006",
+   "question": "lim(x→0) ln(1+x)/x =",
+   "options": [
+    "1",
+    "0",
+    "e",
+    "1/2"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 1",
+   "module": "gs-极限",
+   "module_name": "高数 · 极限",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "ln(1+x)~x。"
+  },
+  {
+   "id": "gs007",
+   "question": "lim(x→∞) (3x²+2x)/(x²-1) =",
+   "options": [
+    "3",
+    "0",
+    "∞",
+    "2"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 3",
+   "module": "gs-极限",
+   "module_name": "高数 · 极限",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "同除以 x²，最高次系数之比 3/1。"
+  },
+  {
+   "id": "gs008",
+   "question": "lim(x→0) (e^x-1-x)/x² =",
+   "options": [
+    "1/2",
+    "1",
+    "0",
+    "1/6"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 1/2",
+   "module": "gs-极限",
+   "module_name": "高数 · 极限",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "泰勒展开 e^x=1+x+x²/2+o(x²)。"
+  },
+  {
+   "id": "gs009",
+   "question": "当 x→0 时，x-sinx 与 x³ 是",
+   "options": [
+    "等价无穷小",
+    "同阶但不等价无穷小",
+    "高阶无穷小",
+    "低阶无穷小"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 同阶但不等价无穷小",
+   "module": "gs-无穷小",
+   "module_name": "高数 · 无穷小",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "(x-sinx)/x³→1/6，是同阶但不等价。"
+  },
+  {
+   "id": "gs010",
+   "question": "x=0 是函数 f(x)=sinx/x 的",
+   "options": [
+    "可去间断点",
+    "跳跃间断点",
+    "无穷间断点",
+    "连续点"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 可去间断点",
+   "module": "gs-连续",
+   "module_name": "高数 · 连续",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "f(0) 无定义，但极限为 1，属可去间断点。"
+  },
+  {
+   "id": "gs011",
+   "question": "下列极限中存在的是",
+   "options": [
+    "lim(x→0) sin(1/x)",
+    "lim(x→0) x·sin(1/x)",
+    "lim(x→0) 1/x",
+    "lim(x→0) |x|/x"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . lim(x→0) x·sin(1/x)",
+   "module": "gs-极限",
+   "module_name": "高数 · 极限",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "x·sin(1/x) 有界量乘无穷小，极限为 0；其余振荡、无穷或左右不等。"
+  },
+  {
+   "id": "gs012",
+   "question": "设 f(x)=x³+2x，则 f'(1) =",
+   "options": [
+    "5",
+    "3",
+    "4",
+    "6"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 5",
+   "module": "gs-导数",
+   "module_name": "高数 · 导数",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "f'(x)=3x²+2，代入得 5。"
+  },
+  {
+   "id": "gs013",
+   "question": "y=x²e^x，则 y' =",
+   "options": [
+    "e^x(x²+2x)",
+    "2xe^x",
+    "x²e^x",
+    "e^x(x²-2x)"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . e^x(x²+2x)",
+   "module": "gs-导数",
+   "module_name": "高数 · 导数",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "乘积法则：2xe^x+x²e^x。"
+  },
+  {
+   "id": "gs014",
+   "question": "y=ln(sinx)，则 y' =",
+   "options": [
+    "cotx",
+    "tanx",
+    "1/sinx",
+    "cosx"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . cotx",
+   "module": "gs-导数",
+   "module_name": "高数 · 导数",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "链式法则 cosx/sinx=cotx。"
+  },
+  {
+   "id": "gs015",
+   "question": "y=arctanx，则 y'(1) =",
+   "options": [
+    "1/2",
+    "1",
+    "π/4",
+    "1/4"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 1/2",
+   "module": "gs-导数",
+   "module_name": "高数 · 导数",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "y'=1/(1+x²)，代入 x=1 得 1/2。"
+  },
+  {
+   "id": "gs016",
+   "question": "曲线 y=x² 在点 (1,1) 处的切线斜率是",
+   "options": [
+    "2",
+    "1",
+    "0",
+    "1/2"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 2",
+   "module": "gs-导数",
+   "module_name": "高数 · 导数",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "y'=2x，x=1 时为 2。"
+  },
+  {
+   "id": "gs017",
+   "question": "函数 y=|x| 在 x=0 处",
+   "options": [
+    "连续且可导",
+    "连续但不可导",
+    "不连续",
+    "无定义"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 连续但不可导",
+   "module": "gs-连续",
+   "module_name": "高数 · 连续",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "左右导数分别为 -1 和 1，不相等，故不可导。"
+  },
+  {
+   "id": "gs018",
+   "question": "函数 y=x³ 在 x=0 处",
+   "options": [
+    "有极大值",
+    "有极小值",
+    "是拐点",
+    "无定义"
+   ],
+   "answer": 2,
+   "answer_letter": "C",
+   "answer_text": "C . 是拐点",
+   "module": "gs-导数应用",
+   "module_name": "高数 · 导数应用",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "y'=3x²≥0 不变号，无极限值；y''=6x 在 0 两侧变号，是拐点。"
+  },
+  {
+   "id": "gs019",
+   "question": "y=x³-3x 的极小值是",
+   "options": [
+    "-2",
+    "2",
+    "0",
+    "-1"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . -2",
+   "module": "gs-极值",
+   "module_name": "高数 · 极值",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "y'=3x²-3=0 得 x=±1，x=1 处取极小值 -2。"
+  },
+  {
+   "id": "gs020",
+   "question": "函数 y=x³-3x 的单调递减区间是",
+   "options": [
+    "(-1,1)",
+    "(-∞,-1)",
+    "(1,+∞)",
+    "(-∞,+∞)"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . (-1,1)",
+   "module": "gs-单调性",
+   "module_name": "高数 · 单调性",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "y'=3(x²-1)<0 当 -1<x<1。"
+  },
+  {
+   "id": "gs021",
+   "question": "设 x=t²，y=t³，则 dy/dx 在 t=1 处等于",
+   "options": [
+    "3/2",
+    "2/3",
+    "3",
+    "1"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 3/2",
+   "module": "gs-导数",
+   "module_name": "高数 · 导数",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "dy/dx=(3t²)/(2t)=3t/2，t=1 得 3/2。"
+  },
+  {
+   "id": "gs022",
+   "question": "y=x^x，则 y'(1) =",
+   "options": [
+    "1",
+    "0",
+    "e",
+    "2"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 1",
+   "module": "gs-导数",
+   "module_name": "高数 · 导数",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "取对数求导：y'=x^x(lnx+1)，x=1 得 1。"
+  },
+  {
+   "id": "gs023",
+   "question": "方程 x²+y²=1 确定的隐函数在点 (0,1) 处的 y' =",
+   "options": [
+    "0",
+    "1",
+    "-1",
+    "不存在"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 0",
+   "module": "gs-导数",
+   "module_name": "高数 · 导数",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "两边求导 2x+2yy'=0，y'=-x/y，代入 (0,1) 得 0。"
+  },
+  {
+   "id": "gs024",
+   "question": "函数 f(x)=x² 在 [0,2] 上满足拉格朗日中值定理的 ξ =",
+   "options": [
+    "1",
+    "1/2",
+    "3/2",
+    "2"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 1",
+   "module": "gs-中值定理",
+   "module_name": "高数 · 中值定理",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "(f(2)-f(0))/(2-0)=2=2ξ，得 ξ=1。"
+  },
+  {
+   "id": "gs025",
+   "question": "下列函数在 [-1,1] 上满足罗尔定理条件的是",
+   "options": [
+    "f(x)=|x|",
+    "f(x)=1/x",
+    "f(x)=x²",
+    "f(x)=x"
+   ],
+   "answer": 2,
+   "answer_letter": "C",
+   "answer_text": "C . f(x)=x²",
+   "module": "gs-中值定理",
+   "module_name": "高数 · 中值定理",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "|x| 在 0 不可导，1/x 不连续，x 两端函数值不等，只有 x² 满足。"
+  },
+  {
+   "id": "gs026",
+   "question": "∫x e^x dx =",
+   "options": [
+    "e^x(x-1)+C",
+    "e^x(x+1)+C",
+    "xe^x+C",
+    "e^x(x-1)"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . e^x(x-1)+C",
+   "module": "gs-不定积分",
+   "module_name": "高数 · 不定积分",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "分部积分：∫xe^x=e^x(x-1)+C。"
+  },
+  {
+   "id": "gs027",
+   "question": "∫1/(1+x²) dx =",
+   "options": [
+    "arctanx+C",
+    "ln(1+x²)+C",
+    "1/(1+x²)+C",
+    "arcsinx+C"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . arctanx+C",
+   "module": "gs-不定积分",
+   "module_name": "高数 · 不定积分",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "基本积分公式。"
+  },
+  {
+   "id": "gs028",
+   "question": "∫x cosx dx =",
+   "options": [
+    "xsinx+cosx+C",
+    "xsinx-cosx+C",
+    "xcosx+sinx+C",
+    "sinx+xcosx+C"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . xsinx+cosx+C",
+   "module": "gs-不定积分",
+   "module_name": "高数 · 不定积分",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "分部积分：xsinx+cosx+C。"
+  },
+  {
+   "id": "gs029",
+   "question": "∫_0^1 x² dx =",
+   "options": [
+    "1/3",
+    "1/2",
+    "1",
+    "2/3"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 1/3",
+   "module": "gs-定积分",
+   "module_name": "高数 · 定积分",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "原函数 x³/3，代入得 1/3。"
+  },
+  {
+   "id": "gs030",
+   "question": "∫_0^π sinx dx =",
+   "options": [
+    "2",
+    "0",
+    "1",
+    "π"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 2",
+   "module": "gs-定积分",
+   "module_name": "高数 · 定积分",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "-cosx 从 0 到 π 得 2。"
+  },
+  {
+   "id": "gs031",
+   "question": "∫_1^e 1/x dx =",
+   "options": [
+    "1",
+    "e",
+    "e-1",
+    "1/e"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 1",
+   "module": "gs-定积分",
+   "module_name": "高数 · 定积分",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "lnx 从 1 到 e 得 1。"
+  },
+  {
+   "id": "gs032",
+   "question": "∫_0^1 e^x dx =",
+   "options": [
+    "e-1",
+    "e",
+    "1",
+    "e+1"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . e-1",
+   "module": "gs-定积分",
+   "module_name": "高数 · 定积分",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "e^x 从 0 到 1 得 e-1。"
+  },
+  {
+   "id": "gs033",
+   "question": "∫_0^1 1/(1+x) dx =",
+   "options": [
+    "ln2",
+    "1",
+    "ln(1/2)",
+    "π/4"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . ln2",
+   "module": "gs-定积分",
+   "module_name": "高数 · 定积分",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "ln(1+x) 从 0 到 1 得 ln2。"
+  },
+  {
+   "id": "gs034",
+   "question": "曲线 y=x² 与 y=x 围成的图形面积是",
+   "options": [
+    "1/6",
+    "1/3",
+    "1/2",
+    "1"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 1/6",
+   "module": "gs-定积分应用",
+   "module_name": "高数 · 定积分应用",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "∫_0^1 (x-x²)dx=1/6。"
+  },
+  {
+   "id": "gs035",
+   "question": "d/dx ∫_a^x f(t)dt =",
+   "options": [
+    "f(x)",
+    "f'(x)",
+    "f(x)-f(a)",
+    "0"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . f(x)",
+   "module": "gs-定积分",
+   "module_name": "高数 · 定积分",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "变上限积分求导公式。"
+  },
+  {
+   "id": "gs036",
+   "question": "下列广义积分收敛的是",
+   "options": [
+    "∫_1^∞ 1/x dx",
+    "∫_1^∞ 1/x² dx",
+    "∫_0^1 1/x dx",
+    "∫_0^1 1/x² dx"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . ∫_1^∞ 1/x² dx",
+   "module": "gs-广义积分",
+   "module_name": "高数 · 广义积分",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "∫_1^∞ x^-p 收敛需 p>1；∫_1^∞ x^-2 dx=1。"
+  },
+  {
+   "id": "gs037",
+   "question": "下列级数中收敛的是",
+   "options": [
+    "∑1/n",
+    "∑1/√n",
+    "∑1/n²",
+    "∑n"
+   ],
+   "answer": 2,
+   "answer_letter": "C",
+   "answer_text": "C . ∑1/n²",
+   "module": "gs-级数",
+   "module_name": "高数 · 级数",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "p 级数 ∑1/n^p 当 p>1 收敛。"
+  },
+  {
+   "id": "gs038",
+   "question": "级数 ∑(1/2)^n 的和是",
+   "options": [
+    "1",
+    "2",
+    "1/2",
+    "∞"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 1",
+   "module": "gs-级数",
+   "module_name": "高数 · 级数",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "等比级数，首项 1/2、公比 1/2，和为 1。"
+  },
+  {
+   "id": "gs039",
+   "question": "级数 ∑(-1)^n/n",
+   "options": [
+    "绝对收敛",
+    "条件收敛",
+    "发散",
+    "无法判断"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 条件收敛",
+   "module": "gs-级数",
+   "module_name": "高数 · 级数",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "自身收敛（莱布尼茨），但 ∑1/n 发散，故条件收敛。"
+  },
+  {
+   "id": "gs040",
+   "question": "幂级数 ∑x^n/n 的收敛半径是",
+   "options": [
+    "1",
+    "2",
+    "1/2",
+    "∞"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 1",
+   "module": "gs-级数",
+   "module_name": "高数 · 级数",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "系数 1/n，R=lim|a_n/a_{n+1}|=1。"
+  },
+  {
+   "id": "gs041",
+   "question": "微分方程 y'=2x 的通解是",
+   "options": [
+    "y=x²+C",
+    "y=2x²+C",
+    "y=x+C",
+    "y=2x+C"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . y=x²+C",
+   "module": "gs-微分方程",
+   "module_name": "高数 · 微分方程",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "两边积分得 y=x²+C。"
+  },
+  {
+   "id": "gs042",
+   "question": "微分方程 y''+y=0 的通解是",
+   "options": [
+    "y=C₁cosx+C₂sinx",
+    "y=C₁e^x+C₂e^-x",
+    "y=C₁+C₂x",
+    "y=C₁sinx"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . y=C₁cosx+C₂sinx",
+   "module": "gs-微分方程",
+   "module_name": "高数 · 微分方程",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "特征方程 r²+1=0，r=±i。"
+  },
+  {
+   "id": "gs043",
+   "question": "微分方程 y'=y 满足 y(0)=1 的特解是",
+   "options": [
+    "y=e^x",
+    "y=e^-x",
+    "y=1",
+    "y=x+1"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . y=e^x",
+   "module": "gs-微分方程",
+   "module_name": "高数 · 微分方程",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "通解 y=Ce^x，代入得 C=1。"
+  },
+  {
+   "id": "gs044",
+   "question": "设 z=x²y，则 ∂z/∂x =",
+   "options": [
+    "2xy",
+    "x²",
+    "2x",
+    "y"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 2xy",
+   "module": "gs-偏导数",
+   "module_name": "高数 · 偏导数",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "对 x 求偏导把 y 当常数，得 2xy。"
+  },
+  {
+   "id": "gs045",
+   "question": "设 z=x²+y²，则在点 (1,1) 处的全微分 dz =",
+   "options": [
+    "2dx+2dy",
+    "dx+dy",
+    "2dx",
+    "4dx+4dy"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 2dx+2dy",
+   "module": "gs-全微分",
+   "module_name": "高数 · 全微分",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "dz=2xdx+2ydy，代入 (1,1) 得 2dx+2dy。"
+  },
+  {
+   "id": "gs046",
+   "question": "设 D:0≤x≤1,0≤y≤2，则 ∫∫_D 1 dσ =",
+   "options": [
+    "2",
+    "1",
+    "1/2",
+    "4"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 2",
+   "module": "gs-重积分",
+   "module_name": "高数 · 重积分",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "区域面积 1×2=2。"
+  },
+  {
+   "id": "gs047",
+   "question": "二元函数 z=f(x,y) 在点 (x0,y0) 处偏导数存在是它在该点可微的",
+   "options": [
+    "充分条件",
+    "必要条件",
+    "充要条件",
+    "无关条件"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 必要条件",
+   "module": "gs-可微性",
+   "module_name": "高数 · 可微性",
+   "type": "choice",
+   "source": "本地高数题库（计算题经 sympy 复核）",
+   "source_id": "gaoshu",
+   "explanation": "可微 ⇒ 偏导存在，反之不成立，故偏导存在是可微的必要条件。"
+  },
+  {
+   "id": "gs048",
+   "question": "函数 y=|x| 在 x=0 处可导",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-导数",
+   "module_name": "高数 · 导数",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "左右导数 -1 与 1 不等，不可导。"
+  },
+  {
+   "id": "gs049",
+   "question": "若函数 f(x) 在 x0 处可导，则 f(x) 在 x0 处必连续",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-连续",
+   "module_name": "高数 · 连续",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "可导必连续。"
+  },
+  {
+   "id": "gs050",
+   "question": "若函数 f(x) 在 x0 处连续，则 f(x) 在 x0 处必可导",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-连续",
+   "module_name": "高数 · 连续",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "反例 y=|x| 在 0 处。"
+  },
+  {
+   "id": "gs051",
+   "question": "若 f'(x0)=0，则 x0 一定是 f(x) 的极值点",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-极值",
+   "module_name": "高数 · 极值",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "反例 y=x³ 在 0 处，f'(0)=0 但不是极值点。"
+  },
+  {
+   "id": "gs052",
+   "question": "若 f(x) 在 x0 处取得极值且 f'(x0) 存在，则 f'(x0)=0",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-极值",
+   "module_name": "高数 · 极值",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "费马引理。"
+  },
+  {
+   "id": "gs053",
+   "question": "两个无穷小量之和仍是无穷小量",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-无穷小",
+   "module_name": "高数 · 无穷小",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "有限个无穷小之和仍为无穷小。"
+  },
+  {
+   "id": "gs054",
+   "question": "两个无穷小量之商一定是无穷小量",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-无穷小",
+   "module_name": "高数 · 无穷小",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "如 x 与 x² 之比为 1/x，不是无穷小。"
+  },
+  {
+   "id": "gs055",
+   "question": "无穷大量与有界量之积一定是无穷大量",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-无穷小",
+   "module_name": "高数 · 无穷小",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "有界量取 0 时乘积为 0。"
+  },
+  {
+   "id": "gs056",
+   "question": "单调有界数列必收敛",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-极限",
+   "module_name": "高数 · 极限",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "单调有界准则。"
+  },
+  {
+   "id": "gs057",
+   "question": "若级数 ∑u_n 收敛，则 ∑u_n² 必收敛",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-级数",
+   "module_name": "高数 · 级数",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "反例 u_n=(-1)^n/√n，∑u_n 收敛但 ∑1/n 发散。"
+  },
+  {
+   "id": "gs058",
+   "question": "若级数 ∑|u_n| 收敛，则 ∑u_n 必收敛",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-级数",
+   "module_name": "高数 · 级数",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "绝对收敛必收敛。"
+  },
+  {
+   "id": "gs059",
+   "question": "∫_(-1)^1 1/x dx = 0",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-广义积分",
+   "module_name": "高数 · 广义积分",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "x=0 为瑕点，该广义积分发散，不能按奇函数对称为 0。"
+  },
+  {
+   "id": "gs060",
+   "question": "若 f(x) 在 [a,b] 上连续，则 f(x) 在 [a,b] 上必有最大值和最小值",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-连续",
+   "module_name": "高数 · 连续",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "闭区间连续函数的最值定理。"
+  },
+  {
+   "id": "gs061",
+   "question": "若 f(x) 在 (a,b) 内可导且 f'(x)>0，则 f(x) 在 (a,b) 内单调递增",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-单调性",
+   "module_name": "高数 · 单调性",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "导数符号与单调性。"
+  },
+  {
+   "id": "gs062",
+   "question": "初等函数在其定义区间内连续",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-连续",
+   "module_name": "高数 · 连续",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "初等函数连续性定理。"
+  },
+  {
+   "id": "gs063",
+   "question": "若 f(x) 在 [a,b] 上连续且 ∫_a^b f(x)dx=0，则 f(x)≡0",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-定积分",
+   "module_name": "高数 · 定积分",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "反例 f(x)=x-1/2 在 [0,1] 上积分为 0。"
+  },
+  {
+   "id": "gs064",
+   "question": "定积分的值与积分变量的记号无关",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-定积分",
+   "module_name": "高数 · 定积分",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "∫_a^b f(x)dx=∫_a^b f(t)dt。"
+  },
+  {
+   "id": "gs065",
+   "question": "若 f(x) 可导，则 f'(x) 必连续",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-导数",
+   "module_name": "高数 · 导数",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "反例 x²sin(1/x) 的导数在 0 处不连续。"
+  },
+  {
+   "id": "gs066",
+   "question": "若 f''(x0)=0，则点 (x0,f(x0)) 必为曲线的拐点",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-导数应用",
+   "module_name": "高数 · 导数应用",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "反例 y=x⁴ 在 0 处 f''(0)=0 但不是拐点。"
+  },
+  {
+   "id": "gs067",
+   "question": "函数 y=x³ 在 x=0 处取得极值",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-极值",
+   "module_name": "高数 · 极值",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "y'=3x² 不变号，不是极值点。"
+  },
+  {
+   "id": "gs068",
+   "question": "若级数 ∑u_n 收敛，则 lim u_n = 0",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-级数",
+   "module_name": "高数 · 级数",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "收敛级数通项趋于 0。"
+  },
+  {
+   "id": "gs069",
+   "question": "若 lim u_n = 0，则级数 ∑u_n 收敛",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-级数",
+   "module_name": "高数 · 级数",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "反例调和级数。"
+  },
+  {
+   "id": "gs070",
+   "question": "两个可导函数之和一定可导",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-导数",
+   "module_name": "高数 · 导数",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "可导函数四则运算性质。"
+  },
+  {
+   "id": "gs071",
+   "question": "若 f(x) 在 x0 处连续，则 f(x) 在 x0 处可微",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-微分",
+   "module_name": "高数 · 微分",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "连续不一定可微，如 y=|x|。"
+  },
+  {
+   "id": "gs072",
+   "question": "若 z=f(x,y) 的偏导数存在，则 z=f(x,y) 必连续",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-多元",
+   "module_name": "高数 · 多元",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "偏导存在不保证连续（如分段函数 xy/(x²+y²)）。"
+  },
+  {
+   "id": "gs073",
+   "question": "若 z=f(x,y) 在点 (x0,y0) 可微，则其偏导数必存在",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-多元",
+   "module_name": "高数 · 多元",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "可微 ⇒ 偏导存在。"
+  },
+  {
+   "id": "gs074",
+   "question": "若 f(x) 在 [a,b] 上可积，则 f(x) 在 [a,b] 上连续",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-定积分",
+   "module_name": "高数 · 定积分",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "可积只要求有界且间断点有限，不要求连续。"
+  },
+  {
+   "id": "gs075",
+   "question": "若 f(x) 在 [a,b] 上连续，则 f(x) 在 [a,b] 上可积",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-定积分",
+   "module_name": "高数 · 定积分",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "连续函数必可积。"
+  },
+  {
+   "id": "gs076",
+   "question": "若 f(x) 为奇函数，则 ∫_(-a)^a f(x)dx = 0",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-定积分",
+   "module_name": "高数 · 定积分",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "奇函数在对称区间上积分为 0。"
+  },
+  {
+   "id": "gs077",
+   "question": "若 f(x) 在 x0 处不可导，则 f(x) 在 x0 处一定不连续",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 1,
+   "answer_letter": "B",
+   "answer_text": "B . 错误",
+   "module": "gs-连续",
+   "module_name": "高数 · 连续",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "不可导仍可能连续，如 y=|x|。"
+  },
+  {
+   "id": "gs078",
+   "question": "函数 y=1/x 在区间 (0,1) 内是连续的",
+   "options": [
+    "正确",
+    "错误"
+   ],
+   "answer": 0,
+   "answer_letter": "A",
+   "answer_text": "A . 正确",
+   "module": "gs-连续",
+   "module_name": "高数 · 连续",
+   "type": "tf",
+   "source": "本地高数题库（判断题按教材定理整理）",
+   "source_id": "gaoshu",
+   "explanation": "初等函数在定义区间内连续。"
+  }
+ ]
+}
