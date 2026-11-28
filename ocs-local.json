@@ -1,0 +1,226 @@
+[
+  {
+    "name": "大学知识题库（OCS · 单结果 · 支持图片题）",
+    "url": "http://127.0.0.1:8765/search",
+    "method": "post",
+    "contentType": "json",
+    "type": "GM_xmlhttpRequest",
+    "headers": {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    "data": {
+      "title": {
+        "handler": "return (env) => (env.suggestion_title || env.title || '')"
+      },
+      "options": {
+        "handler": "return (env) => (env.suggestion_options || env.options || '')"
+      },
+      "type": "${type}",
+      "images": {
+        "handler": "return (env) => { if (env.images && env.images.length) return env.images; const sel = '.questionLi img, .TiMu img, .mark_item img, .stem_answer img, .subject_describe img'; const imgs = [...document.querySelectorAll(sel)]; return imgs.slice(0, 3).map(i => i.src).filter(Boolean); }"
+      }
+    },
+    "handler": "return (res) => { if (!res) return undefined; const pick = (d) => [d.question, (d.answer_ocs || d.answer_letter || d.answer)]; if (res.items && res.items.length) return res.items.map(pick); if (res.data && res.data.question) return [pick(res.data)]; return undefined; }",
+    "author": "主体题目来自 C-Eval 开源数据集（按主题筛选重组），补充判断题经 GitHub tikuAdapter 接入的公开题库核对",
+    "version": "2.6",
+    "description": "多源检索：优先 GitHub 公开题库源，本地保留 248 道大学知识题（C-Eval 筛选 234 道 + 补充判断 14 道）与 78 道高等数学题（选择 + 判断，计算题经 sympy 复核）；数学题优先本地符号计算，算出的值须与选项完全一致，且不接受在线源的答案。",
+    "homepage": "http://127.0.0.1:8765/api/daxue/meta",
+    "license": "CC BY-NC-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "updateTime": "2026-11-28",
+    "count": 326,
+    "sources": [
+      {
+        "id": "buguake",
+        "name": "不挂科题库源",
+        "via": "GitHub · DokiDoki1103/tikuAdapter",
+        "priority": 1,
+        "online": true,
+        "returns": "题干 + 答案"
+      },
+      {
+        "id": "icodef",
+        "name": "言溪题库",
+        "via": "GitHub · DokiDoki1103/tikuAdapter",
+        "priority": 2,
+        "online": true,
+        "returns": "仅答案"
+      },
+      {
+        "id": "local",
+        "name": "C-Eval 大学知识题",
+        "via": "本地库 · CC BY-NC-SA 4.0",
+        "priority": 3,
+        "online": false,
+        "returns": "题干 + 答案 + 解析"
+      },
+      {
+        "id": "gaoshu",
+        "name": "高等数学题库",
+        "via": "本地库 · 项目自建",
+        "priority": 4,
+        "online": false,
+        "returns": "题干 + 选项 + 答案 + 解析"
+      },
+      {
+        "id": "mathsolve",
+        "name": "本地符号计算",
+        "via": "Python · sympy",
+        "priority": 5,
+        "online": false,
+        "returns": "计算结果（含推导）"
+      }
+    ],
+    "resolution": "检索顺序：数学题不走在线源——先本地符号计算（算出的值须与选项完全一致），再查本地高数题库，都没有就返回未收录；文字题按 高相似度本地题 → 不挂科（GitHub） → 言溪（GitHub）→ 本地题库 的顺序。可用 ?source=buguake|icodef|local|gaoshu|all 指定。",
+    "modules": [
+      {
+        "id": "ideal",
+        "name": "理想信念",
+        "count": 65
+      },
+      {
+        "id": "moral",
+        "name": "道德法治",
+        "count": 54
+      },
+      {
+        "id": "study",
+        "name": "学习与认知",
+        "count": 55
+      },
+      {
+        "id": "mind",
+        "name": "心理与健康",
+        "count": 37
+      },
+      {
+        "id": "social",
+        "name": "人际与适应",
+        "count": 13
+      },
+      {
+        "id": "campus",
+        "name": "大学与高等教育",
+        "count": 19
+      },
+      {
+        "id": "plan",
+        "name": "目标与计划",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "name": "大学知识题库（OCS · 多结果 · 支持图片题）",
+    "url": "http://127.0.0.1:8765/search?count=3",
+    "method": "post",
+    "contentType": "json",
+    "type": "GM_xmlhttpRequest",
+    "headers": {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    "data": {
+      "title": {
+        "handler": "return (env) => (env.suggestion_title || env.title || '')"
+      },
+      "options": {
+        "handler": "return (env) => (env.suggestion_options || env.options || '')"
+      },
+      "type": "${type}",
+      "images": {
+        "handler": "return (env) => { if (env.images && env.images.length) return env.images; const sel = '.questionLi img, .TiMu img, .mark_item img, .stem_answer img, .subject_describe img'; const imgs = [...document.querySelectorAll(sel)]; return imgs.slice(0, 3).map(i => i.src).filter(Boolean); }"
+      }
+    },
+    "handler": "return (res) => { if (!res) return undefined; const pick = (d) => [d.question, (d.answer_ocs || d.answer_letter || d.answer)]; if (res.items && res.items.length) return res.items.map(pick); if (res.data && res.data.question) return [pick(res.data)]; return undefined; }",
+    "author": "主体题目来自 C-Eval 开源数据集（按主题筛选重组），补充判断题经 GitHub tikuAdapter 接入的公开题库核对",
+    "version": "2.6",
+    "description": "多源检索：优先 GitHub 公开题库源，本地保留 248 道大学知识题（C-Eval 筛选 234 道 + 补充判断 14 道）与 78 道高等数学题（选择 + 判断，计算题经 sympy 复核）；数学题优先本地符号计算，算出的值须与选项完全一致，且不接受在线源的答案。",
+    "homepage": "http://127.0.0.1:8765/api/daxue/meta",
+    "license": "CC BY-NC-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "updateTime": "2026-11-28",
+    "count": 326,
+    "sources": [
+      {
+        "id": "buguake",
+        "name": "不挂科题库源",
+        "via": "GitHub · DokiDoki1103/tikuAdapter",
+        "priority": 1,
+        "online": true,
+        "returns": "题干 + 答案"
+      },
+      {
+        "id": "icodef",
+        "name": "言溪题库",
+        "via": "GitHub · DokiDoki1103/tikuAdapter",
+        "priority": 2,
+        "online": true,
+        "returns": "仅答案"
+      },
+      {
+        "id": "local",
+        "name": "C-Eval 大学知识题",
+        "via": "本地库 · CC BY-NC-SA 4.0",
+        "priority": 3,
+        "online": false,
+        "returns": "题干 + 答案 + 解析"
+      },
+      {
+        "id": "gaoshu",
+        "name": "高等数学题库",
+        "via": "本地库 · 项目自建",
+        "priority": 4,
+        "online": false,
+        "returns": "题干 + 选项 + 答案 + 解析"
+      },
+      {
+        "id": "mathsolve",
+        "name": "本地符号计算",
+        "via": "Python · sympy",
+        "priority": 5,
+        "online": false,
+        "returns": "计算结果（含推导）"
+      }
+    ],
+    "resolution": "检索顺序：数学题不走在线源——先本地符号计算（算出的值须与选项完全一致），再查本地高数题库，都没有就返回未收录；文字题按 高相似度本地题 → 不挂科（GitHub） → 言溪（GitHub）→ 本地题库 的顺序。可用 ?source=buguake|icodef|local|gaoshu|all 指定。",
+    "modules": [
+      {
+        "id": "ideal",
+        "name": "理想信念",
+        "count": 65
+      },
+      {
+        "id": "moral",
+        "name": "道德法治",
+        "count": 54
+      },
+      {
+        "id": "study",
+        "name": "学习与认知",
+        "count": 55
+      },
+      {
+        "id": "mind",
+        "name": "心理与健康",
+        "count": 37
+      },
+      {
+        "id": "social",
+        "name": "人际与适应",
+        "count": 13
+      },
+      {
+        "id": "campus",
+        "name": "大学与高等教育",
+        "count": 19
+      },
+      {
+        "id": "plan",
+        "name": "目标与计划",
+        "count": 5
+      }
+    ]
+  }
+]
