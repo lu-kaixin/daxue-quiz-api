@@ -1,3 +1,11 @@
 fastapi>=0.110
 uvicorn[standard]>=0.27
 pydantic>=2.5
+# ---- 可选：数学题本地计算 ----
+# 装了才能算数学题（极限/定积分/极值/行列式/求导/组合概率），约 12 MB，纯 Python。
+# 不装不影响文字题与在线源，/health 里 math 会是 false。
+sympy>=1.12
+# ---- 可选：图片题 OCR ----
+# 装了才能识别图片题（约 50 MB，含 onnxruntime 与内置模型）。
+# 不装不影响文字题，/health 里 ocr 会是 false。
+# rapidocr-onnxruntime>=1.3
