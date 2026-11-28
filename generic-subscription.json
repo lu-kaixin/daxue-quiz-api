@@ -1,7 +1,7 @@
 [
   {
     "name": "大学知识题库（通用 · 单结果）",
-    "url": "https://your-domain.example.com/search?q={keyword}",
+    "url": "https://a8d93c5821aaa7c93.app.workbuddy.host/search?q={keyword}&sharecode=6QCZCGX2NG",
     "method": "post",
     "contentType": "json",
     "headers": {
@@ -16,13 +16,13 @@
     },
     "handler": "return (res) => { if (!res) return undefined; const pick = (d) => [d.question, (d.answer_ocs || d.answer_letter || d.answer)]; if (res.items && res.items.length) return res.items.map(pick); if (res.data && res.data.question) return [pick(res.data)]; return undefined; }",
     "author": "主体题目来自 C-Eval 开源数据集（按主题筛选重组），补充判断题经 GitHub tikuAdapter 接入的公开题库核对",
-    "version": "2.3",
-    "description": "多源检索：优先 GitHub 公开题库源，本地保留 248 道大学知识题（C-Eval 筛选 234 道 + 补充判断 14 道）。",
-    "homepage": "https://your-domain.example.com/api/daxue/meta",
+    "version": "2.6",
+    "description": "多源检索：优先 GitHub 公开题库源，本地保留 248 道大学知识题（C-Eval 筛选 234 道 + 补充判断 14 道）与 78 道高等数学题（选择 + 判断，计算题经 sympy 复核）；数学题优先本地符号计算，算出的值须与选项完全一致，且不接受在线源的答案。",
+    "homepage": "https://a8d93c5821aaa7c93.app.workbuddy.host/api/daxue/meta?sharecode=6QCZCGX2NG",
     "license": "CC BY-NC-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "updateTime": "2026-11-17",
-    "count": 248,
+    "updateTime": "2026-11-28",
+    "count": 326,
     "sources": [
       {
         "id": "buguake",
@@ -47,9 +47,25 @@
         "priority": 3,
         "online": false,
         "returns": "题干 + 答案 + 解析"
+      },
+      {
+        "id": "gaoshu",
+        "name": "高等数学题库",
+        "via": "本地库 · 项目自建",
+        "priority": 4,
+        "online": false,
+        "returns": "题干 + 选项 + 答案 + 解析"
+      },
+      {
+        "id": "mathsolve",
+        "name": "本地符号计算",
+        "via": "Python · sympy",
+        "priority": 5,
+        "online": false,
+        "returns": "计算结果（含推导）"
       }
     ],
-    "resolution": "按优先级依次检索：1 不挂科（GitHub）→ 2 言溪（GitHub）→ 3 本地 C-Eval 大学知识题。可用 ?source=buguake|icodef|local|all 指定。",
+    "resolution": "检索顺序：数学题不走在线源——先本地符号计算（算出的值须与选项完全一致），再查本地高数题库，都没有就返回未收录；文字题按 高相似度本地题 → 不挂科（GitHub） → 言溪（GitHub）→ 本地题库 的顺序。可用 ?source=buguake|icodef|local|gaoshu|all 指定。",
     "modules": [
       {
         "id": "ideal",
@@ -90,7 +106,7 @@
   },
   {
     "name": "大学知识题库（通用 · 多结果）",
-    "url": "https://your-domain.example.com/search?q={keyword}&count=3",
+    "url": "https://a8d93c5821aaa7c93.app.workbuddy.host/search?q={keyword}&count=3&sharecode=6QCZCGX2NG",
     "method": "get",
     "contentType": "json",
     "headers": {
@@ -98,13 +114,13 @@
     },
     "handler": "return (res) => { if (!res) return undefined; const pick = (d) => [d.question, (d.answer_ocs || d.answer_letter || d.answer)]; if (res.items && res.items.length) return res.items.map(pick); if (res.data && res.data.question) return [pick(res.data)]; return undefined; }",
     "author": "主体题目来自 C-Eval 开源数据集（按主题筛选重组），补充判断题经 GitHub tikuAdapter 接入的公开题库核对",
-    "version": "2.3",
-    "description": "多源检索：优先 GitHub 公开题库源，本地保留 248 道大学知识题（C-Eval 筛选 234 道 + 补充判断 14 道）。",
-    "homepage": "https://your-domain.example.com/api/daxue/meta",
+    "version": "2.6",
+    "description": "多源检索：优先 GitHub 公开题库源，本地保留 248 道大学知识题（C-Eval 筛选 234 道 + 补充判断 14 道）与 78 道高等数学题（选择 + 判断，计算题经 sympy 复核）；数学题优先本地符号计算，算出的值须与选项完全一致，且不接受在线源的答案。",
+    "homepage": "https://a8d93c5821aaa7c93.app.workbuddy.host/api/daxue/meta?sharecode=6QCZCGX2NG",
     "license": "CC BY-NC-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "updateTime": "2026-11-17",
-    "count": 248,
+    "updateTime": "2026-11-28",
+    "count": 326,
     "sources": [
       {
         "id": "buguake",
@@ -129,9 +145,25 @@
         "priority": 3,
         "online": false,
         "returns": "题干 + 答案 + 解析"
+      },
+      {
+        "id": "gaoshu",
+        "name": "高等数学题库",
+        "via": "本地库 · 项目自建",
+        "priority": 4,
+        "online": false,
+        "returns": "题干 + 选项 + 答案 + 解析"
+      },
+      {
+        "id": "mathsolve",
+        "name": "本地符号计算",
+        "via": "Python · sympy",
+        "priority": 5,
+        "online": false,
+        "returns": "计算结果（含推导）"
       }
     ],
-    "resolution": "按优先级依次检索：1 不挂科（GitHub）→ 2 言溪（GitHub）→ 3 本地 C-Eval 大学知识题。可用 ?source=buguake|icodef|local|all 指定。",
+    "resolution": "检索顺序：数学题不走在线源——先本地符号计算（算出的值须与选项完全一致），再查本地高数题库，都没有就返回未收录；文字题按 高相似度本地题 → 不挂科（GitHub） → 言溪（GitHub）→ 本地题库 的顺序。可用 ?source=buguake|icodef|local|gaoshu|all 指定。",
     "modules": [
       {
         "id": "ideal",
